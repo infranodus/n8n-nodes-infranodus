@@ -1,5 +1,6 @@
 import type { INodeProperties } from 'n8n-workflow';
-import { graphSaveDescription } from './create';
+import { graphCreateDescription } from './create';
+import { graphGenerateDescription } from './generate';
 import { graphGetDescription } from './get';
 
 const showOnlyForGraphs = {
@@ -17,6 +18,31 @@ export const knowledgeGraphs: INodeProperties[] = [
 		},
 		options: [
 			{
+				name: 'Generate a graph from text',
+				value: 'generateGraph',
+				action: 'Generate a new graph',
+				description: 'Generate a new graph from text without saving it in InfraNodus',
+				routing: {
+					request: {
+						method: 'POST',
+						url: '/graphAndStatements',
+					},
+				},
+			},
+			{
+				name: 'Create a graph from text',
+				value: 'createGraph',
+				action: 'Create a new graph',
+				description: 'Create, save, and return a new graph from text',
+				routing: {
+					request: {
+						method: 'POST',
+						url: '/graphAndStatements',
+					},
+				},
+			},
+
+			{
 				name: 'Get a graph',
 				value: 'getGraph',
 				action: 'Get an existing graph',
@@ -28,21 +54,10 @@ export const knowledgeGraphs: INodeProperties[] = [
 					},
 				},
 			},
-			{
-				name: 'Create a graph',
-				value: 'saveGraph',
-				action: 'Create a new graph',
-				description: 'Create a new graph from text or statements',
-				routing: {
-					request: {
-						method: 'POST',
-						url: '/graphAndStatements',
-					},
-				},
-			},
 		],
 		default: 'getGraph',
 	},
-	...graphSaveDescription,
+	...graphCreateDescription,
+	...graphGenerateDescription,
 	...graphGetDescription,
 ];

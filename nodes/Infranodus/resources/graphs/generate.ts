@@ -1,19 +1,18 @@
 import type { INodeProperties } from 'n8n-workflow';
 
-const showOnlyForGraphCreate = {
-	operation: ['createGraph'],
+const showOnlyForGraphGenerate = {
+	operation: ['generateGraph'],
 	resource: ['knowledgeGraphs'],
 };
 
-export const graphCreateDescription: INodeProperties[] = [
+export const graphGenerateDescription: INodeProperties[] = [
 	{
 		displayName: 'Name',
 		name: 'name',
-		type: 'string',
-		default: '',
-		required: true,
+		type: 'hidden',
+		default: 'do_not_save_graph',
 		displayOptions: {
-			show: showOnlyForGraphCreate,
+			show: showOnlyForGraphGenerate,
 		},
 		description: 'The name of the graph',
 		routing: {
@@ -30,7 +29,7 @@ export const graphCreateDescription: INodeProperties[] = [
 		default: '',
 		required: true,
 		displayOptions: {
-			show: showOnlyForGraphCreate,
+			show: showOnlyForGraphGenerate,
 		},
 		description: 'The text to create a graph from',
 		routing: {
@@ -43,20 +42,9 @@ export const graphCreateDescription: INodeProperties[] = [
 	{
 		displayName: 'Save / update the graph in InfraNodus',
 		name: 'doNotSave',
-		type: 'options',
-		options: [
-			{
-				name: 'No',
-				value: 'true',
-			},
-			{
-				name: 'Yes',
-				value: 'false',
-			},
-		],
+		type: 'hidden',
 		default: 'true',
-		displayOptions: { show: showOnlyForGraphCreate },
-		required: true,
+		displayOptions: { show: showOnlyForGraphGenerate },
 		description: 'Save or update the graph with this name in InfraNodus',
 		routing: {
 			send: {

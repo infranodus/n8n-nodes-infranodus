@@ -21,7 +21,7 @@ export const aiAdviceForGraph: INodeProperties[] = [
 			{
 				name: 'Query an Expert (Existing Graph)',
 				value: 'promptGraph',
-				action: 'Get an AI advice from a gGraph RAG knowledge base',
+				action: 'Get an AI advice from a Graph RAG knowledge base',
 				description:
 					'Get an AI advice from an existing Graph RAG knowledge base or reasoning ontology',
 				routing: {
