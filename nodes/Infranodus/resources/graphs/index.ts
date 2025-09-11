@@ -2,6 +2,7 @@ import type { INodeProperties } from 'n8n-workflow';
 import { graphCreateDescription } from './create';
 import { graphGetDescription } from './get';
 import { graphStatsGenerateDescription } from './stats';
+import { generateGraphSummaryDescription } from './stats';
 import { getGraphAdviceDefaultsDescription } from './defaults';
 
 const showOnlyForGraphs = {
@@ -54,6 +55,18 @@ export const knowledgeGraphs: INodeProperties[] = [
 					},
 				},
 			},
+			{
+				name: 'Generate RAG Augmentation Prompt',
+				value: 'generateGraphSummary',
+				action: 'Generate RAG augmentation prompt',
+				description: 'Generate RAG augmentation prompt from a text or existing graph',
+				routing: {
+					request: {
+						method: 'POST',
+						url: '/graphAndStatements',
+					},
+				},
+			},
 		],
 		default: 'getGraph',
 	},
@@ -61,4 +74,5 @@ export const knowledgeGraphs: INodeProperties[] = [
 	...graphGetDescription,
 	...graphStatsGenerateDescription,
 	...getGraphAdviceDefaultsDescription,
+	...generateGraphSummaryDescription,
 ];
