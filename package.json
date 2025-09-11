@@ -1,33 +1,49 @@
 {
-  "name": "n8n-nodes-infranodus",
-  "version": "0.1.0",
-  "description": "n8n community node to work with the Example API",
-  "license": "MIT",
-  "homepage": "https://example.com",
-  "keywords": ["n8n-community-node-package"],
-  "author": { "name": "Dmitry Paranyushkin", "email": "dmitry@noduslabs.com" },
-  "repository": { "type": "git", "url": "" },
-  "scripts": {
-    "build": "n8n-node build",
-    "build:watch": "tsc --watch",
-    "dev": "n8n-node dev",
-    "lint": "n8n-node lint",
-    "lint:fix": "n8n-node lint --fix",
-    "release": "n8n-node release",
-    "prepublishOnly": "n8n-node prerelease"
-  },
-  "files": ["dist"],
-  "n8n": {
-    "n8nNodesApiVersion": 1,
-    "credentials": ["dist/credentials/InfranodusApi.credentials.js"],
-    "nodes": ["dist/nodes/Infranodus/Infranodus.node.js"]
-  },
-  "devDependencies": {
-    "@n8n/node-cli": "*",
-    "eslint": "9.32.0",
-    "prettier": "3.6.2",
-    "release-it": "^19.0.4",
-    "typescript": "5.9.2"
-  },
-  "peerDependencies": { "n8n-workflow": "*" }
+	"name": "n8n-nodes-infranodus",
+	"version": "0.1.0",
+	"description": "n8n community node to work with the InfraNodus GraphRAG API",
+	"license": "MIT",
+	"homepage": "https://infranodus.com",
+	"keywords": [
+		"n8n-community-node-package"
+	],
+	"author": {
+		"name": "InfraNodus",
+		"email": "contact@infranodus.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/credentials/InfranodusApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Infranodus/Infranodus.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
 }

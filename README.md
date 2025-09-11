@@ -1,8 +1,8 @@
 # n8n-nodes-infranodus
 
-This is an n8n community node. It lets you use _app/service name_ in your n8n workflows.
+This is an n8n community node. It lets you use InfraNodus GraphRAG API in your n8n workflows.
 
-_App/service name_ is _one or two sentences describing the service this node integrates with_.
+You can create and use knowledge graphs as experts in your LLM workflows (no OpenAI keys required). You can also use the knowledge graphs to augment and improve your RAG flows with graph-based AI advice about the structure of the knowledge and better quality retrieval without the need to set up complex vector store infrastructures.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
@@ -20,27 +20,35 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 ## Operations
 
-_List the operations supported by your node._
+The node supports the following operations:
+
+- Create a knowledge graph
+- Get a knowledge graph
+- Generate a question based on the content gaps in a knowledge graph
+- Prompt a knowledge graph expert
 
 ## Credentials
 
-_If users need to authenticate with the app/service, provide details here. You should include prerequisites (such as signing up with the service), available authentication methods, and how to set them up._
+The node requires an API token from InfraNodus. You can get it from [your InfraNodus account](https://infranodus.com/api-access).
+
+We use Bearer authentication in case you want to build your own node using InfraNodus.
 
 ## Compatibility
 
-_State the minimum n8n version, as well as which versions you test against. You can also include any known version incompatibility issues._
+The node is compatible with n8n v0.225.0 and above.
 
 ## Usage
 
-_This is an optional section. Use it to help users with any difficult or confusing aspects of the node._
-
-_By the time users are looking for community nodes, they probably already know n8n basics. But if you expect new users, you can link to the [Try it out](https://docs.n8n.io/try-it-out/) documentation to help them get started._
+To learn more about using InfraNodus with n8n, see our tutorials and videos on the Nodus Labs support portal: [https://support.noduslabs.com/hc/en-us/search?utf8=%E2%9C%93&query=n8n](https://support.noduslabs.com/hc/en-us/search?utf8=%E2%9C%93&query=n8n)
 
 ## Resources
 
-* [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
-* _Link to app/service documentation._
+- [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
+- [Nodus Labs support portal](https://support.noduslabs.com/hc/en-us/search?utf8=%E2%9C%93&query=n8n)
+- [InfraNodus API endpoints](https://support.noduslabs.com/hc/en-us/articles/13605983537692-InfraNodus-API-Access-Points)
 
 ## Version history
 
-_This is another optional section. If your node has multiple versions, include a short description of available versions and what changed, as well as any compatibility impact._
+v 0.1.0 (2025-09-11)
+
+- Initial release
