@@ -1,12 +1,17 @@
 import type { INodeProperties } from 'n8n-workflow';
 
 const showOnlyForGraphAdvice = {
-	operation: ['questionGraph', 'promptGraph'],
+	operation: ['questionGraph', 'promptGraph', 'summarizeGraph'],
 	resource: ['aiAdviceForGraph'],
 };
 
 const showOnlyForQuestion = {
 	operation: ['questionGraph'],
+	resource: ['aiAdviceForGraph'],
+};
+
+const showOnlyForSummarize = {
+	operation: ['summarizeGraph'],
 	resource: ['aiAdviceForGraph'],
 };
 
@@ -107,6 +112,31 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
+		displayName: 'Include graph summary',
+		name: 'includeGraphSummary',
+		type: 'options',
+		options: [
+			{
+				name: 'Yes',
+				value: 'true',
+			},
+			{
+				name: 'No',
+				value: 'false',
+			},
+		],
+		default: 'true',
+		required: true,
+		description: 'Include the graph summary in the response',
+		displayOptions: { show: showOnlyForSummarize },
+		routing: {
+			send: {
+				type: 'query',
+				property: 'includeGraphSummary',
+			},
+		},
+	},
+	{
 		displayName: 'Include extended graph summary',
 		name: 'extendedGraphSummary',
 		type: 'options',
@@ -124,6 +154,31 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		required: false,
 		description: 'Include information about gaps and keywords',
 		displayOptions: { show: showOnlyForQuestion },
+		routing: {
+			send: {
+				type: 'query',
+				property: 'extendedGraphSummary',
+			},
+		},
+	},
+	{
+		displayName: 'Include extended graph summary',
+		name: 'extendedGraphSummary',
+		type: 'options',
+		options: [
+			{
+				name: 'Yes',
+				value: 'true',
+			},
+			{
+				name: 'No',
+				value: 'false',
+			},
+		],
+		default: 'true',
+		required: false,
+		description: 'Include information about gaps and keywords',
+		displayOptions: { show: showOnlyForSummarize },
 		routing: {
 			send: {
 				type: 'query',
@@ -172,7 +227,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		default: 'gpt-4o',
 		required: false,
 		description: 'Include information about gaps and keywords',
-		displayOptions: { show: showOnlyForQuestion },
+		displayOptions: { show: showOnlyForGraphAdvice },
 		routing: {
 			send: {
 				type: 'body',
