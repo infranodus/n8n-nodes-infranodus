@@ -2,7 +2,7 @@ import type { INodeProperties } from 'n8n-workflow';
 
 const showOnlyForGenerateQuestion = {
 	operation: ['questionGraph'],
-	resource: ['aiAdvice'],
+	resource: ['aiAdviceForGraph'],
 };
 
 export const generateQuestionDescription: INodeProperties[] = [

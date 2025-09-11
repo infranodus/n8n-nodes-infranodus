@@ -4,22 +4,22 @@ import { graphNameDescription } from './name';
 import { generateQuestionDescription } from './question';
 import { getGraphResponseDescription } from './response';
 
-const showOnlyForAiAdvice = {
-	resource: ['aiAdvice'],
+const showOnlyForAiAdviceForGraph = {
+	resource: ['aiAdviceForGraph'],
 };
 
-export const aiAdvice: INodeProperties[] = [
+export const aiAdviceForGraph: INodeProperties[] = [
 	{
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
 		noDataExpression: true,
 		displayOptions: {
-			show: showOnlyForAiAdvice,
+			show: showOnlyForAiAdviceForGraph,
 		},
 		options: [
 			{
-				name: 'Query an Expert',
+				name: 'Query an Expert (Existing Graph)',
 				value: 'promptGraph',
 				action: 'Get an AI advice from a gGraph RAG knowledge base',
 				description:

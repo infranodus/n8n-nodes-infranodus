@@ -2,7 +2,7 @@ import type { INodeProperties } from 'n8n-workflow';
 
 const showOnlyForGraphResponse = {
 	operation: ['promptGraph'],
-	resource: ['aiAdvice'],
+	resource: ['aiAdviceForGraph'],
 };
 
 export const getGraphResponseDescription: INodeProperties[] = [

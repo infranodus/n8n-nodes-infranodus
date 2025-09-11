@@ -2,7 +2,7 @@ import type { INodeProperties } from 'n8n-workflow';
 
 const showOnlyForExistingGraphs = {
 	operation: ['promptGraph', 'questionGraph'],
-	resource: ['aiAdvice'],
+	resource: ['aiAdviceForGraph'],
 };
 
 export const graphNameDescription: INodeProperties[] = [
