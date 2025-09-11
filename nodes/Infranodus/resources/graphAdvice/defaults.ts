@@ -5,6 +5,11 @@ const showOnlyForGraphAdvice = {
 	resource: ['aiAdvice'],
 };
 
+const showOnlyForQuestion = {
+	operation: ['questionGraph'],
+	resource: ['aiAdvice'],
+};
+
 export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 	{
 		displayName: 'AI Topics',
@@ -93,11 +98,36 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		default: 'false',
 		required: false,
 		description: 'Include the graph summary in the response',
-		displayOptions: { show: showOnlyForGraphAdvice },
+		displayOptions: { show: showOnlyForQuestion },
 		routing: {
 			send: {
 				type: 'query',
 				property: 'includeGraphSummary',
+			},
+		},
+	},
+	{
+		displayName: 'Include extended graph summary',
+		name: 'extendedGraphSummary',
+		type: 'options',
+		options: [
+			{
+				name: 'No',
+				value: 'false',
+			},
+			{
+				name: 'Yes',
+				value: 'true',
+			},
+		],
+		default: 'false',
+		required: false,
+		description: 'Include information about gaps and keywords',
+		displayOptions: { show: showOnlyForQuestion },
+		routing: {
+			send: {
+				type: 'query',
+				property: 'extendedGraphSummary',
 			},
 		},
 	},
