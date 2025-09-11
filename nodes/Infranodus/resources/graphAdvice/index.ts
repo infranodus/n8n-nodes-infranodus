@@ -1,6 +1,8 @@
 import type { INodeProperties } from 'n8n-workflow';
-import { graphGetAdviceDescription } from './get';
-import { generateQuestionDescription } from './generate';
+import { getGraphAdviceDefaultsDescription } from './defaults';
+import { graphNameDescription } from './name';
+import { generateQuestionDescription } from './question';
+import { getGraphResponseDescription } from './response';
 
 const showOnlyForAiAdvice = {
 	resource: ['aiAdvice'],
@@ -17,10 +19,11 @@ export const aiAdvice: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Prompt a graph expert',
+				name: 'Query an Expert',
 				value: 'promptGraph',
-				action: 'Get AI advice from a graph expert',
-				description: 'Get an AI advice from an existing knowledge graph',
+				action: 'Get an AI advice from a gGraph RAG knowledge base',
+				description:
+					'Get an AI advice from an existing Graph RAG knowledge base or reasoning ontology',
 				routing: {
 					request: {
 						method: 'POST',
@@ -29,10 +32,11 @@ export const aiAdvice: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Generate a question',
+				name: 'Generate research questions',
 				value: 'questionGraph',
-				action: 'Generate a research question',
-				description: 'Generate questions generated based on the content gaps in a graph',
+				action: 'Generate research questions & prompts',
+				description:
+					'Generate research questions and prompts generated based on the content gaps in a graph',
 				routing: {
 					request: {
 						method: 'POST',
@@ -43,6 +47,8 @@ export const aiAdvice: INodeProperties[] = [
 		],
 		default: 'promptGraph',
 	},
-	...graphGetAdviceDescription,
+	...graphNameDescription,
 	...generateQuestionDescription,
+	...getGraphResponseDescription,
+	...getGraphAdviceDefaultsDescription,
 ];

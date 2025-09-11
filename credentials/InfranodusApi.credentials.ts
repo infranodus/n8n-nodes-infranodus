@@ -36,7 +36,7 @@ export class InfranodusApi implements ICredentialType {
 
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'https://infranodus.com/api/v1',
+			baseURL: 'http://localhost:3000/api/v1',
 			url: '/token',
 		},
 	};

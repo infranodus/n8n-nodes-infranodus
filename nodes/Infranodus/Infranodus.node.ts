@@ -4,9 +4,9 @@ import { aiAdvice } from './resources/graphAdvice';
 
 export class Infranodus implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Infranodus',
+		displayName: 'InfraNodus',
 		name: 'infranodus',
-		icon: { light: 'file:infranodus.svg', dark: 'file:infranodus.dark.svg' },
+		icon: 'file:infranodus.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
@@ -19,7 +19,7 @@ export class Infranodus implements INodeType {
 		outputs: [NodeConnectionType.Main],
 		credentials: [{ name: 'infranodusApi', required: true }],
 		requestDefaults: {
-			baseURL: 'https://infranodus.com/api/v1',
+			baseURL: 'http://localhost:3000/api/v1',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
