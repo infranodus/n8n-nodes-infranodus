@@ -32,7 +32,7 @@ export const aiAdviceForGraph: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Generate research questions',
+				name: 'Generate Research Questions',
 				value: 'questionGraph',
 				action: 'Generate research questions & prompts',
 				description:

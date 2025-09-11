@@ -7,7 +7,7 @@ const showOnlyForGraphCreate = {
 
 export const graphCreateDescription: INodeProperties[] = [
 	{
-		displayName: 'Name',
+		displayName: 'Graph name',
 		name: 'name',
 		type: 'string',
 		default: '',
@@ -15,7 +15,7 @@ export const graphCreateDescription: INodeProperties[] = [
 		displayOptions: {
 			show: showOnlyForGraphCreate,
 		},
-		description: 'The name of the graph',
+		description: 'The name of the graph (use any if you are not saving the graph to InfraNodus)',
 		routing: {
 			send: {
 				type: 'body',
@@ -33,35 +33,13 @@ export const graphCreateDescription: INodeProperties[] = [
 			show: showOnlyForGraphCreate,
 		},
 		description: 'The text to create a graph from',
+		typeOptions: {
+			rows: 8,
+		},
 		routing: {
 			send: {
 				type: 'body',
 				property: 'text',
-			},
-		},
-	},
-	{
-		displayName: 'Save / update the graph in InfraNodus',
-		name: 'doNotSave',
-		type: 'options',
-		options: [
-			{
-				name: 'No',
-				value: 'true',
-			},
-			{
-				name: 'Yes',
-				value: 'false',
-			},
-		],
-		default: 'true',
-		displayOptions: { show: showOnlyForGraphCreate },
-		required: true,
-		description: 'Save or update the graph with this name in InfraNodus',
-		routing: {
-			send: {
-				type: 'query',
-				property: 'doNotSave',
 			},
 		},
 	},

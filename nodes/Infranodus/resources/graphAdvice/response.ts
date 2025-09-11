@@ -19,6 +19,9 @@ export const getGraphResponseDescription: INodeProperties[] = [
 				property: 'prompt',
 			},
 		},
+		typeOptions: {
+			rows: 3,
+		},
 	},
 	{
 		displayName: 'Request mode',

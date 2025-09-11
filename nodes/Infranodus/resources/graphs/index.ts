@@ -1,7 +1,8 @@
 import type { INodeProperties } from 'n8n-workflow';
 import { graphCreateDescription } from './create';
-import { graphGenerateDescription } from './generate';
 import { graphGetDescription } from './get';
+import { graphStatsGenerateDescription } from './stats';
+import { getGraphAdviceDefaultsDescription } from './defaults';
 
 const showOnlyForGraphs = {
 	resource: ['knowledgeGraphs'],
@@ -18,22 +19,10 @@ export const knowledgeGraphs: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Generate a graph from text',
-				value: 'generateGraph',
-				action: 'Generate a new graph',
-				description: 'Generate a new graph from text without saving it in InfraNodus',
-				routing: {
-					request: {
-						method: 'POST',
-						url: '/graphAndStatements',
-					},
-				},
-			},
-			{
-				name: 'Create a graph from text',
+				name: 'Create a Graph from Text',
 				value: 'createGraph',
-				action: 'Create a new graph',
-				description: 'Create, save, and return a new graph from text',
+				action: 'Create a new graph from text',
+				description: 'Generate a new graph from text and return the graph data and statistics ',
 				routing: {
 					request: {
 						method: 'POST',
@@ -41,12 +30,23 @@ export const knowledgeGraphs: INodeProperties[] = [
 					},
 				},
 			},
-
 			{
-				name: 'Get a graph',
+				name: 'Get an Existing Graph',
 				value: 'getGraph',
-				action: 'Get an existing graph',
-				description: 'Get an existing graph of a user',
+				action: 'Get an existing graph from InfraNodus',
+				description: 'Get an existing graph of a user from InfraNodus',
+				routing: {
+					request: {
+						method: 'POST',
+						url: '/graphAndStatements',
+					},
+				},
+			},
+			{
+				name: 'Generate Content Gaps and Topics',
+				value: 'generateGraphStats',
+				action: 'Generate content gaps and topics',
+				description: 'Generate content gaps and topical clusters from a text or existing graph',
 				routing: {
 					request: {
 						method: 'POST',
@@ -58,6 +58,7 @@ export const knowledgeGraphs: INodeProperties[] = [
 		default: 'getGraph',
 	},
 	...graphCreateDescription,
-	...graphGenerateDescription,
 	...graphGetDescription,
+	...graphStatsGenerateDescription,
+	...getGraphAdviceDefaultsDescription,
 ];

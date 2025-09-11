@@ -1,11 +1,36 @@
 import type { INodeProperties } from 'n8n-workflow';
 
 const showOnlyForGraph = {
-	operation: ['createGraph', 'getGraph'],
+	operation: ['createGraph', 'generateGraph'],
 	resource: ['knowledgeGraphs'],
 };
 
 export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
+	{
+		displayName: 'Save / update the graph in InfraNodus',
+		name: 'doNotSave',
+		type: 'options',
+		options: [
+			{
+				name: 'No',
+				value: 'true',
+			},
+			{
+				name: 'Yes',
+				value: 'false',
+			},
+		],
+		default: 'true',
+		displayOptions: { show: showOnlyForGraph },
+		required: true,
+		description: 'Save or update the graph with this name in InfraNodus',
+		routing: {
+			send: {
+				type: 'query',
+				property: 'doNotSave',
+			},
+		},
+	},
 	{
 		displayName: 'AI Topics',
 		name: 'aiTopics',
@@ -86,7 +111,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include JSON graph',
+		displayName: 'Include full JSON graph',
 		name: 'includeGraph',
 		type: 'options',
 		options: [

@@ -32,6 +32,9 @@ export const graphGenerateDescription: INodeProperties[] = [
 			show: showOnlyForGraphGenerate,
 		},
 		description: 'The text to create a graph from',
+		typeOptions: {
+			rows: 8,
+		},
 		routing: {
 			send: {
 				type: 'body',
