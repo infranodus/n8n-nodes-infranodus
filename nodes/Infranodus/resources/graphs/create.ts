@@ -43,4 +43,28 @@ export const graphCreateDescription: INodeProperties[] = [
 			},
 		},
 	},
+	{
+		displayName: 'Include statements in response',
+		name: 'includeStatements',
+		type: 'options',
+		options: [
+			{
+				name: 'No',
+				value: 'false',
+			},
+			{
+				name: 'Yes',
+				value: 'true',
+			},
+		],
+		default: 'false',
+		description: 'Include statements from the graph in response',
+		displayOptions: { show: showOnlyForGraphCreate },
+		routing: {
+			send: {
+				type: 'query',
+				property: 'includeStatements',
+			},
+		},
+	},
 ];
