@@ -131,4 +131,53 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 			},
 		},
 	},
+	{
+		displayName: 'Model to use',
+		name: 'modelToUse',
+		type: 'options',
+		options: [
+			{
+				name: 'GPT-4o (best)',
+				value: 'gpt-4o',
+			},
+			{
+				name: 'GPT-4o-mini (fastest)',
+				value: 'gpt-4o-mini',
+			},
+			{
+				name: 'GPT-5 (slowest, reasoning)',
+				value: 'gpt-5',
+			},
+			{
+				name: 'GPT-5-mini (faster reasoning)',
+				value: 'gpt-5-mini',
+			},
+			{
+				name: 'Claude Opus 4.1',
+				value: 'claude-opus-4.1',
+			},
+			{
+				name: 'Claude Sonnet 4',
+				value: 'claude-sonnet-4',
+			},
+			{
+				name: 'Gemini 2.5 Flash',
+				value: 'gemini-2.5-flash',
+			},
+			{
+				name: 'Gemini 2.5 Flash Lite',
+				value: 'gemini-2.5-flash-lite',
+			},
+		],
+		default: 'gpt-4o',
+		required: false,
+		description: 'Include information about gaps and keywords',
+		displayOptions: { show: showOnlyForQuestion },
+		routing: {
+			send: {
+				type: 'body',
+				property: 'modelToUse',
+			},
+		},
+	},
 ];
