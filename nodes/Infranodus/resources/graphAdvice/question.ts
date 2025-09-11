@@ -33,4 +33,18 @@ export const generateQuestionDescription: INodeProperties[] = [
 			},
 		},
 	},
+	{
+		displayName: 'Request mode',
+		name: 'requestMode',
+		type: 'hidden',
+		default: 'question',
+		description: 'The type of AI request',
+		displayOptions: { show: showOnlyForGenerateQuestion },
+		routing: {
+			send: {
+				type: 'body',
+				property: 'requestMode',
+			},
+		},
+	},
 ];

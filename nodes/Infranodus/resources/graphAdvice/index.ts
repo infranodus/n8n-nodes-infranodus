@@ -3,6 +3,7 @@ import { getGraphAdviceDefaultsDescription } from './defaults';
 import { graphNameDescription } from './name';
 import { generateQuestionDescription } from './question';
 import { getGraphResponseDescription } from './response';
+import { summarizeGraphDescription } from './summarize';
 
 const showOnlyForAiAdviceForGraph = {
 	resource: ['aiAdviceForGraph'],
@@ -44,11 +45,24 @@ export const aiAdviceForGraph: INodeProperties[] = [
 					},
 				},
 			},
+			{
+				name: 'Generate a Topical Summary',
+				value: 'summarizeGraph',
+				action: 'Generate topical summary',
+				description: 'Generate a topical summary of a graph',
+				routing: {
+					request: {
+						method: 'POST',
+						url: '/graphAndAdvice',
+					},
+				},
+			},
 		],
 		default: 'promptGraph',
 	},
 	...graphNameDescription,
 	...generateQuestionDescription,
 	...getGraphResponseDescription,
+	...summarizeGraphDescription,
 	...getGraphAdviceDefaultsDescription,
 ];
