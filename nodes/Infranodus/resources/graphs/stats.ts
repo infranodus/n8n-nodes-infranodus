@@ -33,7 +33,7 @@ export const graphStatsGenerateDescription: INodeProperties[] = [
 		name: 'text',
 		type: 'string',
 		default: '',
-		required: true,
+		required: false,
 		displayOptions: {
 			show: showOnlyForGraphStatsGenerate,
 		},
@@ -73,6 +73,30 @@ export const graphStatsGenerateDescription: INodeProperties[] = [
 		},
 	},
 	{
+		displayName: 'Include AI-generated topics',
+		name: 'aiTopics',
+		type: 'options',
+		options: [
+			{
+				name: 'No',
+				value: 'false',
+			},
+			{
+				name: 'Yes',
+				value: 'true',
+			},
+		],
+		default: 'true',
+		displayOptions: { show: showOnlyForGraphStatsGenerate },
+		description: 'Should generate AI topic names for graph clusters (slower)',
+		routing: {
+			send: {
+				type: 'body',
+				property: 'aiTopics',
+			},
+		},
+	},
+	{
 		displayName: 'Include content gaps and topics information',
 		name: 'extendedGraphSummary',
 		type: 'hidden',
@@ -83,6 +107,54 @@ export const graphStatsGenerateDescription: INodeProperties[] = [
 			send: {
 				type: 'query',
 				property: 'extendedGraphSummary',
+			},
+		},
+	},
+	{
+		displayName: 'Include full JSON graph',
+		name: 'includeGraph',
+		type: 'options',
+		options: [
+			{
+				name: 'Yes',
+				value: 'true',
+			},
+			{
+				name: 'No',
+				value: 'false',
+			},
+		],
+		default: 'false',
+		description: 'Include the full JSON graph in response',
+		displayOptions: { show: showOnlyForGraphStatsGenerate },
+		routing: {
+			send: {
+				type: 'query',
+				property: 'includeGraph',
+			},
+		},
+	},
+	{
+		displayName: 'Include all the statements',
+		name: 'includeStatements',
+		type: 'options',
+		options: [
+			{
+				name: 'Yes',
+				value: 'true',
+			},
+			{
+				name: 'No',
+				value: 'false',
+			},
+		],
+		default: 'false',
+		description: 'Include all the statements in return object',
+		displayOptions: { show: showOnlyForGraphStatsGenerate },
+		routing: {
+			send: {
+				type: 'query',
+				property: 'includeStatements',
 			},
 		},
 	},
@@ -111,7 +183,7 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 		name: 'text',
 		type: 'string',
 		default: '',
-		required: true,
+		required: false,
 		displayOptions: {
 			show: showOnlyForGraphSummaryGenerate,
 		},
@@ -195,6 +267,54 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 			send: {
 				type: 'query',
 				property: 'extendedGraphSummary',
+			},
+		},
+	},
+	{
+		displayName: 'Include AI-generated topics',
+		name: 'aiTopics',
+		type: 'options',
+		options: [
+			{
+				name: 'No',
+				value: 'false',
+			},
+			{
+				name: 'Yes',
+				value: 'true',
+			},
+		],
+		default: 'true',
+		displayOptions: { show: showOnlyForGraphSummaryGenerate },
+		description: 'Should generate AI topic names for graph clusters (slower)',
+		routing: {
+			send: {
+				type: 'body',
+				property: 'aiTopics',
+			},
+		},
+	},
+	{
+		displayName: 'Include full JSON graph',
+		name: 'includeGraph',
+		type: 'options',
+		options: [
+			{
+				name: 'Yes',
+				value: 'true',
+			},
+			{
+				name: 'No',
+				value: 'false',
+			},
+		],
+		default: 'false',
+		description: 'Include the full JSON graph in response',
+		displayOptions: { show: showOnlyForGraphSummaryGenerate },
+		routing: {
+			send: {
+				type: 'query',
+				property: 'includeGraph',
 			},
 		},
 	},

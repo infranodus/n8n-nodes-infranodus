@@ -142,31 +142,6 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		type: 'options',
 		options: [
 			{
-				name: 'No',
-				value: 'false',
-			},
-			{
-				name: 'Yes',
-				value: 'true',
-			},
-		],
-		default: 'false',
-		required: false,
-		description: 'Include information about gaps and keywords',
-		displayOptions: { show: showOnlyForQuestion },
-		routing: {
-			send: {
-				type: 'query',
-				property: 'extendedGraphSummary',
-			},
-		},
-	},
-	{
-		displayName: 'Include extended graph summary',
-		name: 'extendedGraphSummary',
-		type: 'options',
-		options: [
-			{
 				name: 'Yes',
 				value: 'true',
 			},
@@ -178,7 +153,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		default: 'true',
 		required: false,
 		description: 'Include information about gaps and keywords',
-		displayOptions: { show: showOnlyForSummarize },
+		displayOptions: { show: showOnlyForGraphAdvice },
 		routing: {
 			send: {
 				type: 'query',
