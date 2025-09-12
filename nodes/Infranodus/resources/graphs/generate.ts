@@ -43,7 +43,7 @@ export const graphGenerateDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Save / update the graph in InfraNodus',
+		displayName: 'Save / Update the Graph in InfraNodus',
 		name: 'doNotSave',
 		type: 'hidden',
 		default: 'true',

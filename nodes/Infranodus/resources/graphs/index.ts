@@ -1,15 +1,14 @@
 import type { INodeProperties } from 'n8n-workflow';
 import { graphCreateDescription } from './create';
 import { graphGetDescription } from './get';
-import { graphStatsGenerateDescription } from './stats';
-import { generateGraphSummaryDescription } from './stats';
+import { graphStatsGenerateDescription, generateGraphSummaryDescription  } from './stats';
 import { getGraphAdviceDefaultsDescription } from './defaults';
 
 const showOnlyForGraphs = {
 	resource: ['knowledgeGraphs'],
 };
 
-export const knowledgeGraphs: INodeProperties[] = [
+export const knowledgeGraph: INodeProperties[] = [
 	{
 		displayName: 'Operation',
 		name: 'operation',
@@ -20,10 +19,10 @@ export const knowledgeGraphs: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Create a Graph from Text',
+				name: 'Create a Graph From Text',
 				value: 'createGraph',
 				action: 'Create a new graph from text',
-				description: 'Generate a new graph from text and return the graph data and statistics ',
+				description: 'Generate a new graph from text and return the graph data and statistics',
 				routing: {
 					request: {
 						method: 'POST',
@@ -34,7 +33,7 @@ export const knowledgeGraphs: INodeProperties[] = [
 			{
 				name: 'Get an Existing Graph',
 				value: 'getGraph',
-				action: 'Get an existing graph from InfraNodus',
+				action: 'Get an existing graph from infra nodus',
 				description: 'Get an existing graph of a user from InfraNodus',
 				routing: {
 					request: {

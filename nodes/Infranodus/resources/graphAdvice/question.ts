@@ -7,7 +7,7 @@ const showOnlyForGenerateQuestion = {
 
 export const generateQuestionDescription: INodeProperties[] = [
 	{
-		displayName: 'Deep thinking mode',
+		displayName: 'Deep Thinking Mode',
 		name: 'extendedAdvice',
 		type: 'options',
 		options: [
@@ -25,7 +25,7 @@ export const generateQuestionDescription: INodeProperties[] = [
 		displayOptions: {
 			show: showOnlyForGenerateQuestion,
 		},
-		description: 'Should we use more content gaps to generate diverse questions	',
+		description: 'Should we use more content gaps to generate diverse questions',
 		routing: {
 			send: {
 				type: 'query',
@@ -34,7 +34,7 @@ export const generateQuestionDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Request mode',
+		displayName: 'Request Mode',
 		name: 'requestMode',
 		type: 'hidden',
 		default: 'question',

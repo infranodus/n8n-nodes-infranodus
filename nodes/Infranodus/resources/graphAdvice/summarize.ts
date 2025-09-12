@@ -7,7 +7,7 @@ const showOnlyForSummarizeGraph = {
 
 export const summarizeGraphDescription: INodeProperties[] = [
 	{
-		displayName: 'Request mode',
+		displayName: 'Request Mode',
 		name: 'requestMode',
 		type: 'hidden',
 		default: 'graph summary',

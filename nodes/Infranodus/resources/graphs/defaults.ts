@@ -7,7 +7,7 @@ const showOnlyForGraph = {
 
 export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 	{
-		displayName: 'Save / update the graph in InfraNodus',
+		displayName: 'Save / Update the Graph in InfraNodus',
 		name: 'doNotSave',
 		type: 'options',
 		options: [
@@ -46,7 +46,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Add graph stats',
+		displayName: 'Add Graph Stats',
 		name: 'addStats',
 		type: 'hidden',
 		default: 'true',
@@ -61,7 +61,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 	},
 
 	{
-		displayName: 'Include graph summary',
+		displayName: 'Include Graph Summary',
 		name: 'includeGraphSummary',
 		type: 'options',
 		options: [
@@ -86,7 +86,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include topics and gaps information',
+		displayName: 'Include Topics and Gaps Information',
 		name: 'extendedGraphSummary',
 		type: 'options',
 		options: [
@@ -111,7 +111,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include full JSON graph',
+		displayName: 'Include Full JSON Graph',
 		name: 'includeGraph',
 		type: 'options',
 		options: [

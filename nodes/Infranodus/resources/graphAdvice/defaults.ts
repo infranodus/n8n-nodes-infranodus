@@ -31,7 +31,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Discourse optimization',
+		displayName: 'Discourse Optimization',
 		name: 'optimize',
 		type: 'hidden',
 		default: 'develop',
@@ -45,7 +45,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Do not save graph',
+		displayName: 'Do Not Save Graph',
 		name: 'doNotSave',
 		type: 'hidden',
 		default: 'true',
@@ -59,7 +59,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Add graph stats',
+		displayName: 'Add Graph Stats',
 		name: 'addStats',
 		type: 'hidden',
 		default: 'true',
@@ -73,7 +73,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include graph',
+		displayName: 'Include Graph',
 		name: 'includeGraph',
 		type: 'hidden',
 		default: 'false',
@@ -87,7 +87,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include graph summary',
+		displayName: 'Include Graph Summary',
 		name: 'includeGraphSummary',
 		type: 'options',
 		options: [
@@ -101,7 +101,6 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 			},
 		],
 		default: 'false',
-		required: false,
 		description: 'Include the graph summary in the response',
 		displayOptions: { show: showOnlyForQuestion },
 		routing: {
@@ -112,7 +111,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include graph summary',
+		displayName: 'Include Graph Summary',
 		name: 'includeGraphSummary',
 		type: 'options',
 		options: [
@@ -137,7 +136,7 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include extended graph summary',
+		displayName: 'Include Extended Graph Summary',
 		name: 'extendedGraphSummary',
 		type: 'options',
 		options: [
@@ -151,7 +150,6 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 			},
 		],
 		default: 'true',
-		required: false,
 		description: 'Include information about gaps and keywords',
 		displayOptions: { show: showOnlyForGraphAdvice },
 		routing: {
@@ -162,24 +160,24 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Model to use',
+		displayName: 'Model to Use',
 		name: 'modelToUse',
 		type: 'options',
 		options: [
 			{
-				name: 'GPT-4o (best)',
+				name: 'GPT-4o (Best)',
 				value: 'gpt-4o',
 			},
 			{
-				name: 'GPT-4o-mini (fastest)',
+				name: 'GPT-4o-Mini (Fastest)',
 				value: 'gpt-4o-mini',
 			},
 			{
-				name: 'GPT-5 (slowest, reasoning)',
+				name: 'GPT-5 (Slowest, Reasoning)',
 				value: 'gpt-5',
 			},
 			{
-				name: 'GPT-5-mini (faster reasoning)',
+				name: 'GPT-5-Mini (Faster Reasoning)',
 				value: 'gpt-5-mini',
 			},
 			{
@@ -200,7 +198,6 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 			},
 		],
 		default: 'gpt-4o',
-		required: false,
 		description: 'Include information about gaps and keywords',
 		displayOptions: { show: showOnlyForGraphAdvice },
 		routing: {

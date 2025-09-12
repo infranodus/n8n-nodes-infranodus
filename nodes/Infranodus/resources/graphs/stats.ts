@@ -12,7 +12,7 @@ const showOnlyForGraphSummaryGenerate = {
 
 export const graphStatsGenerateDescription: INodeProperties[] = [
 	{
-		displayName: 'Graph name',
+		displayName: 'Graph Name',
 		name: 'name',
 		type: 'string',
 		default: '',
@@ -33,7 +33,6 @@ export const graphStatsGenerateDescription: INodeProperties[] = [
 		name: 'text',
 		type: 'string',
 		default: '',
-		required: false,
 		displayOptions: {
 			show: showOnlyForGraphStatsGenerate,
 		},
@@ -49,7 +48,7 @@ export const graphStatsGenerateDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Save / update the graph in InfraNodus',
+		displayName: 'Save / Update the Graph in InfraNodus',
 		name: 'doNotSave',
 		type: 'options',
 		options: [
@@ -73,7 +72,7 @@ export const graphStatsGenerateDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include AI-generated topics',
+		displayName: 'Include AI-Generated Topics',
 		name: 'aiTopics',
 		type: 'options',
 		options: [
@@ -97,7 +96,7 @@ export const graphStatsGenerateDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include content gaps and topics information',
+		displayName: 'Include Content Gaps and Topics Information',
 		name: 'extendedGraphSummary',
 		type: 'hidden',
 		default: 'true',
@@ -111,7 +110,7 @@ export const graphStatsGenerateDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include full JSON graph',
+		displayName: 'Include Full JSON Graph',
 		name: 'includeGraph',
 		type: 'options',
 		options: [
@@ -135,7 +134,7 @@ export const graphStatsGenerateDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include all the statements',
+		displayName: 'Include All the Statements',
 		name: 'includeStatements',
 		type: 'options',
 		options: [
@@ -162,7 +161,7 @@ export const graphStatsGenerateDescription: INodeProperties[] = [
 
 export const generateGraphSummaryDescription: INodeProperties[] = [
 	{
-		displayName: 'Graph name',
+		displayName: 'Graph Name',
 		name: 'name',
 		type: 'string',
 		default: '',
@@ -183,7 +182,6 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 		name: 'text',
 		type: 'string',
 		default: '',
-		required: false,
 		displayOptions: {
 			show: showOnlyForGraphSummaryGenerate,
 		},
@@ -199,7 +197,7 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Save / update the graph in InfraNodus',
+		displayName: 'Save / Update the Graph in InfraNodus',
 		name: 'doNotSave',
 		type: 'options',
 		options: [
@@ -223,7 +221,7 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include graph summary for RAG augmentation in response ',
+		displayName: 'Include Graph Summary for RAG Augmentation in Response',
 		name: 'includeGraphSummary',
 		type: 'options',
 		options: [
@@ -247,7 +245,7 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include content gaps and topics information',
+		displayName: 'Include Content Gaps and Topics Information',
 		name: 'extendedGraphSummary',
 		type: 'options',
 		options: [
@@ -271,7 +269,7 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include AI-generated topics',
+		displayName: 'Include AI-Generated Topics',
 		name: 'aiTopics',
 		type: 'options',
 		options: [
@@ -295,7 +293,7 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include full JSON graph',
+		displayName: 'Include Full JSON Graph',
 		name: 'includeGraph',
 		type: 'options',
 		options: [
@@ -319,7 +317,7 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include statements in response',
+		displayName: 'Include Statements in Response',
 		name: 'includeStatements',
 		type: 'options',
 		options: [
@@ -343,11 +341,10 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include full JSON graph in response',
+		displayName: 'Include Full JSON Graph in Response',
 		name: 'includeGraph',
 		type: 'hidden',
 		default: 'false',
-		description: 'Include full JSON graph in response',
 		displayOptions: { show: showOnlyForGraphSummaryGenerate },
 		routing: {
 			send: {

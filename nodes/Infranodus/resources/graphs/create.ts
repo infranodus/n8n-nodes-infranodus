@@ -7,7 +7,7 @@ const showOnlyForGraphCreate = {
 
 export const graphCreateDescription: INodeProperties[] = [
 	{
-		displayName: 'Graph name',
+		displayName: 'Graph Name',
 		name: 'name',
 		type: 'string',
 		default: '',
@@ -44,7 +44,7 @@ export const graphCreateDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include statements in response',
+		displayName: 'Include Statements in Response',
 		name: 'includeStatements',
 		type: 'options',
 		options: [

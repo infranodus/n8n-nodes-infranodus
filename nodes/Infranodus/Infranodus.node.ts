@@ -1,5 +1,5 @@
 import { NodeConnectionType, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
-import { knowledgeGraphs } from './resources/graphs';
+import { knowledgeGraph } from './resources/graphs';
 import { aiAdviceForGraph } from './resources/graphAdvice';
 
 export class Infranodus implements INodeType {
@@ -34,17 +34,17 @@ export class Infranodus implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
-						name: 'AI Advice from Graph',
+						name: 'AI Advice From Graph',
 						value: 'aiAdviceForGraph',
 					},
 					{
-						name: 'Knowledge Graphs',
+						name: 'Knowledge Graph',
 						value: 'knowledgeGraphs',
 					},
 				],
 				default: 'aiAdviceForGraph',
 			},
-			...knowledgeGraphs,
+			...knowledgeGraph,
 			...aiAdviceForGraph,
 		],
 	};

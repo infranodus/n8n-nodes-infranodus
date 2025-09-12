@@ -7,7 +7,7 @@ const showOnlyForGraphGet = {
 
 export const graphGetDescription: INodeProperties[] = [
 	{
-		displayName: 'Graph name',
+		displayName: 'Graph Name',
 		name: 'name',
 		type: 'string',
 		displayOptions: { show: showOnlyForGraphGet },
@@ -21,7 +21,7 @@ export const graphGetDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include AI-generated topics',
+		displayName: 'Include AI-Generated Topics',
 		name: 'aiTopics',
 		type: 'options',
 		options: [
@@ -45,7 +45,7 @@ export const graphGetDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Add graph stats',
+		displayName: 'Add Graph Stats',
 		name: 'addStats',
 		type: 'hidden',
 		default: 'true',
@@ -60,7 +60,7 @@ export const graphGetDescription: INodeProperties[] = [
 	},
 
 	{
-		displayName: 'Include graph summary',
+		displayName: 'Include Graph Summary',
 		name: 'includeGraphSummary',
 		type: 'options',
 		options: [
@@ -85,7 +85,7 @@ export const graphGetDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include topics and gaps information',
+		displayName: 'Include Topics and Gaps Information',
 		name: 'extendedGraphSummary',
 		type: 'options',
 		options: [
@@ -110,7 +110,7 @@ export const graphGetDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Include full JSON graph',
+		displayName: 'Include Full JSON Graph',
 		name: 'includeGraph',
 		type: 'options',
 		options: [

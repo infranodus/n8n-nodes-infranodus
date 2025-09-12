@@ -24,7 +24,7 @@ export const getGraphResponseDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Request mode',
+		displayName: 'Request Mode',
 		name: 'requestMode',
 		type: 'hidden',
 		default: 'response',

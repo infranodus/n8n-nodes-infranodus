@@ -7,7 +7,7 @@ const showOnlyForExistingGraphs = {
 
 export const graphNameDescription: INodeProperties[] = [
 	{
-		displayName: 'Graph name',
+		displayName: 'Graph Name',
 		name: 'name',
 		type: 'string',
 		default: '',
