@@ -165,22 +165,6 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 		type: 'options',
 		options: [
 			{
-				name: 'GPT-4o (Best)',
-				value: 'gpt-4o',
-			},
-			{
-				name: 'GPT-4o-Mini (Fastest)',
-				value: 'gpt-4o-mini',
-			},
-			{
-				name: 'GPT-5 (Slowest, Reasoning)',
-				value: 'gpt-5',
-			},
-			{
-				name: 'GPT-5-Mini (Faster Reasoning)',
-				value: 'gpt-5-mini',
-			},
-			{
 				name: 'Claude Opus 4.1',
 				value: 'claude-opus-4.1',
 			},
@@ -195,6 +179,22 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 			{
 				name: 'Gemini 2.5 Flash Lite',
 				value: 'gemini-2.5-flash-lite',
+			},
+			{
+				name: 'GPT-4o (Best)',
+				value: 'gpt-4o',
+			},
+			{
+				name: 'GPT-4o-Mini (Fastest)',
+				value: 'gpt-4o-mini',
+			},
+			{
+				name: 'GPT-5 (Slowest, Reasoning)',
+				value: 'gpt-5',
+			},
+			{
+				name: 'GPT-5-Mini (Faster Reasoning)',
+				value: 'gpt-5-mini',
 			},
 		],
 		default: 'gpt-4o',
