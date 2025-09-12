@@ -5,7 +5,14 @@
 	"license": "MIT",
 	"homepage": "https://infranodus.com",
 	"keywords": [
-		"n8n-community-node-package"
+		"n8n-community-node-package",
+		"InfraNodus",
+		"GraphRAG",
+		"knowledge graph",
+		"Graph-RAG",
+		"Graph RAG",
+		"content gaps",
+		"content gap analysis"
 	],
 	"author": {
 		"name": "InfraNodus",

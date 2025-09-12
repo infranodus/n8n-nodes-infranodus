@@ -4,22 +4,23 @@ import { aiAdviceForGraph } from './resources/graphAdvice';
 
 export class Infranodus implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'InfraNodus',
+		displayName: 'InfraNodus Graph RAG',
 		name: 'infranodus',
 		icon: 'file:infranodus.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Build knowledge graphs and get AI advice from InfraNodus API',
+		description:
+			'Build knowledge graphs, get AI advice, and extract content gaps with the InfraNodus API',
 		defaults: {
-			name: 'InfraNodus',
+			name: 'InfraNodus Graph RAG',
 		},
 		usableAsTool: true,
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
 		credentials: [{ name: 'infranodusApi', required: true }],
 		requestDefaults: {
-			baseURL: 'http://localhost:3000/api/v1',
+			baseURL: 'https://infranodus.com/api/v1',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',

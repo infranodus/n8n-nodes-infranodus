@@ -1,8 +1,10 @@
 # n8n-nodes-infranodus
 
-This is an n8n community node. It lets you use InfraNodus GraphRAG API in your n8n workflows.
+This is an n8n community node from [InfraNodus](https://infranodus.com). It lets you use [InfraNodus GraphRAG API](https://infranodus.com/docs/graph-rag-knowledge-graph) in your n8n workflows.
 
-You can create and use knowledge graphs as experts in your LLM workflows (no OpenAI keys required). You can also use the knowledge graphs to augment and improve your RAG flows with graph-based AI advice about the structure of the knowledge and better quality retrieval without the need to set up complex vector store infrastructures.
+You can create and use knowledge graphs as experts in your LLM workflows (no OpenAI keys required). InfraNodus can provide information about the main topics and content gaps in any text, so you can use it in your marketing and research workflows.
+
+You can also use the knowledge graphs to augment and improve your RAG flows with graph-based AI advice about the structure of the knowledge and better quality retrieval without the need to set up complex vector store infrastructures.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
