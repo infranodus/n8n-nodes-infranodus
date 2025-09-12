@@ -4,6 +4,10 @@ This is an n8n community node from [InfraNodus](https://infranodus.com). It lets
 
 You can create and use knowledge graphs as experts in your LLM workflows (no OpenAI keys required). InfraNodus can provide information about the main topics and content gaps in any text, so you can use it in your marketing and research workflows.
 
+![InfraNodus graph](https://infranodus.com/images/front/infranodus-overview.jpg)
+
+Video demo: [https://www.youtube.com/watch?v=kS0QTUvcH6E](https://www.youtube.com/watch?v=kS0QTUvcH6E)
+
 You can also use the knowledge graphs to augment and improve your RAG flows with graph-based AI advice about the structure of the knowledge and better quality retrieval without the need to set up complex vector store infrastructures.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
