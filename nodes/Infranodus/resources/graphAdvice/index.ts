@@ -22,9 +22,8 @@ export const aiAdviceForGraph: INodeProperties[] = [
 			{
 				name: 'Query an Expert (Existing Graph)',
 				value: 'promptGraph',
-				action: 'Get an ai advice from a graph rag knowledge base',
-				description:
-					'Get an AI advice from an existing Graph RAG knowledge base or reasoning ontology',
+				action: 'Get a response from knowledge base',
+				description: 'Get an AI advice from an existing knowledge base or ontology',
 				routing: {
 					request: {
 						method: 'POST',
@@ -35,9 +34,8 @@ export const aiAdviceForGraph: INodeProperties[] = [
 			{
 				name: 'Generate Research Questions',
 				value: 'questionGraph',
-				action: 'Generate research questions & prompts',
-				description:
-					'Generate research questions and prompts generated based on the content gaps in a graph',
+				action: 'Generate research questions',
+				description: 'Generate research questions based on the content gaps in a graph',
 				routing: {
 					request: {
 						method: 'POST',
@@ -49,7 +47,7 @@ export const aiAdviceForGraph: INodeProperties[] = [
 				name: 'Generate a Topical Summary',
 				value: 'summarizeGraph',
 				action: 'Generate topical summary',
-				description: 'Generate a topical summary of a graph',
+				description: 'Generate a topical summary of a knowledge graph',
 				routing: {
 					request: {
 						method: 'POST',

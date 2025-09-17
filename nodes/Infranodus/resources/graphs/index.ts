@@ -1,7 +1,7 @@
 import type { INodeProperties } from 'n8n-workflow';
 import { graphCreateDescription } from './create';
 import { graphGetDescription } from './get';
-import { graphStatsGenerateDescription, generateGraphSummaryDescription  } from './stats';
+import { graphStatsGenerateDescription, generateGraphSummaryDescription } from './stats';
 import { getGraphAdviceDefaultsDescription } from './defaults';
 
 const showOnlyForGraphs = {
@@ -22,7 +22,7 @@ export const knowledgeGraph: INodeProperties[] = [
 				name: 'Create a Graph From Text',
 				value: 'createGraph',
 				action: 'Create a new graph from text',
-				description: 'Generate a new graph from text and return the graph data and statistics',
+				description: 'Generate a new knowledge graph from text and return it & stats',
 				routing: {
 					request: {
 						method: 'POST',
@@ -33,7 +33,7 @@ export const knowledgeGraph: INodeProperties[] = [
 			{
 				name: 'Get an Existing Graph',
 				value: 'getGraph',
-				action: 'Get an existing graph from infra nodus',
+				action: 'Get an existing infranodus graph',
 				description: 'Get an existing graph of a user from InfraNodus',
 				routing: {
 					request: {
@@ -46,7 +46,7 @@ export const knowledgeGraph: INodeProperties[] = [
 				name: 'Generate Content Gaps and Topics',
 				value: 'generateGraphStats',
 				action: 'Generate content gaps and topics',
-				description: 'Generate content gaps and topical clusters from a text or existing graph',
+				description: 'Generate content gaps and topics from a text or existing graph',
 				routing: {
 					request: {
 						method: 'POST',
