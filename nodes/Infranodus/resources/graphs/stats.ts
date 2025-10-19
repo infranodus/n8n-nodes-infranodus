@@ -340,17 +340,4 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Include Full JSON Graph in Response',
-		name: 'includeGraph',
-		type: 'hidden',
-		default: 'false',
-		displayOptions: { show: showOnlyForGraphSummaryGenerate },
-		routing: {
-			send: {
-				type: 'query',
-				property: 'includeGraph',
-			},
-		},
-	},
 ];
