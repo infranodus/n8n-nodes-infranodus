@@ -120,6 +120,56 @@ npm install n8n-nodes-infranodus
 
 3. Then restart n8n
 
+## Local Node Development
+
+If you're using the node on your local machine, you can link your local InfraNodus n8n node to your local n8n instance.
+
+Then you can modify the resources and requests using the [InfraNodus API](https://infranodus.com/api). You can also add new custom tools.
+
+If you have InfraNodus running locally, you can replace the `baseUrl` with your local InfraNodus instance address (default is `https://infranodus.com/api/v1`).
+
+In order to start local development, you need to link your local InfraNodus n8n node to your local n8n instance, so every time you change the code in the InfraNodus n8n node, it updates in n8n as well.
+
+0. Create a copy of this repository on your local machine
+
+1. Go to this node's folder on your local machine and install dependencies
+
+```bash
+npm install
+```
+
+2. Make the necessary changes and build the node
+
+```bash
+npm build
+```
+
+3. Make sure you're in the InfraNodus node's folder and run:
+
+```bash
+npm link
+```
+
+3. Then go to the locally installed `n8n/nodes` folder, usually at
+
+```bash
+cd ~/.n8n/nodes
+```
+
+4. Link the local InfraNodus n8n node package to the n8n instance:
+
+```bash
+npm link n8n-nodes-infranodus
+```
+
+This will make your local n8n instance refer not to the generally available npm package but to the local infranodus n8n node instance you linked to.
+
+5. Then run the n8n instance locally using the
+
+```bash
+n8n start
+```
+
 ## Operations
 
 The node supports the following operations:
@@ -148,8 +198,17 @@ To learn more about using InfraNodus with n8n, see our tutorials and videos on t
 - [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
 - [Nodus Labs support portal](https://support.noduslabs.com/hc/en-us/search?utf8=%E2%9C%93&query=n8n)
 - [InfraNodus API endpoints](https://support.noduslabs.com/hc/en-us/articles/13605983537692-InfraNodus-API-Access-Points)
+- [Video demo of how the InfraNodus n8n node works](http://youtube.com/watch?v=vkvRWto3TnQ)
 
 ## Version history
+
+v 0.1.5 (2025-11-09)
+
+- Add local development instructions to the README file
+
+v 0.1.4 (2025-10-25)
+
+- Fix bugs with duplicate tool definitions
 
 v 0.1.0 (2025-09-11)
 
