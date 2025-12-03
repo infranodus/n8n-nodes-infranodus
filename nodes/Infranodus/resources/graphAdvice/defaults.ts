@@ -181,14 +181,6 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 				value: 'claude-sonnet-4.5',
 			},
 			{
-				name: 'Grok 4.1 Fast Non-Reasoning',
-				value: 'grok-4.1-fast-non-reasoning',
-			},
-			{
-				name: 'Grok 4.1 Reasoning',
-				value: 'grok-4.1-fast-reasoning',
-			},
-			{
 				name: 'Gemini 2.5 Flash',
 				value: 'gemini-2.5-flash',
 			},
@@ -211,6 +203,14 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 			{
 				name: 'GPT-5-Mini (Faster Reasoning)',
 				value: 'gpt-5-mini',
+			},
+			{
+				name: 'Grok 4.1 Fast Non-Reasoning',
+				value: 'grok-4.1-fast-non-reasoning',
+			},
+			{
+				name: 'Grok 4.1 Reasoning',
+				value: 'grok-4.1-fast-reasoning',
 			},
 		],
 		default: 'gpt-4o',
