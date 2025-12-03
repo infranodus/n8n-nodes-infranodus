@@ -170,6 +170,22 @@ This will make your local n8n instance refer not to the generally available npm 
 n8n start
 ```
 
+### To Update the Local Node in n8n
+
+To have the updates reflected in n8n, you need to:
+
+1. Run the build command in the node's folder
+
+```bash
+npm run build
+```
+
+2. Restart n8n:
+
+```bash
+n8n start
+```
+
 ## Operations
 
 The node supports the following operations:
