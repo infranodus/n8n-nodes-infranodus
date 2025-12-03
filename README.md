@@ -218,13 +218,24 @@ To learn more about using InfraNodus with n8n, see our tutorials and videos on t
 
 ## Version history
 
-v 0.1.5 (2025-11-09)
+v 0.1.7 (2025-12-03)
 
+- bug fixes
+- improve installation instructions
+
+v 0.1.5 (2025-12-03)
+
+- Add new GraphRAG / vector search retrieval endpoint
+- Add support for latest AI models
 - Add local development instructions to the README file
 
 v 0.1.4 (2025-10-25)
 
 - Fix bugs with duplicate tool definitions
+
+v 0.1.3 (2025-09-17)
+
+- Fix bugs and incorrect tool settings
 
 v 0.1.0 (2025-09-11)
 
