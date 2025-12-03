@@ -169,8 +169,24 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 				value: 'claude-opus-4.1',
 			},
 			{
+				name: 'Claude Opus 4.5',
+				value: 'claude-opus-4.5',
+			},
+			{
 				name: 'Claude Sonnet 4',
 				value: 'claude-sonnet-4',
+			},
+			{
+				name: 'Claude Sonnet 4.5',
+				value: 'claude-sonnet-4.5',
+			},
+			{
+				name: 'Grok 4.1 Fast Non-Reasoning',
+				value: 'grok-4.1-fast-non-reasoning',
+			},
+			{
+				name: 'Grok 4.1 Reasoning',
+				value: 'grok-4.1-fast-reasoning',
 			},
 			{
 				name: 'Gemini 2.5 Flash',
