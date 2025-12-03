@@ -11,7 +11,7 @@ export const graphCreateDescription: INodeProperties[] = [
 		name: 'name',
 		type: 'string',
 		default: '',
-		required: true,
+		required: false,
 		displayOptions: {
 			show: showOnlyForGraphCreate,
 		},
@@ -28,11 +28,11 @@ export const graphCreateDescription: INodeProperties[] = [
 		name: 'text',
 		type: 'string',
 		default: '',
-		required: true,
+		required: false,
 		displayOptions: {
 			show: showOnlyForGraphCreate,
 		},
-		description: 'The text to create a graph from',
+		description: 'The text to create a graph from (leave empty if querying an existing graph)',
 		typeOptions: {
 			rows: 8,
 		},

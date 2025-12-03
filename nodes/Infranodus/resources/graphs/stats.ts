@@ -16,7 +16,7 @@ export const graphStatsGenerateDescription: INodeProperties[] = [
 		name: 'name',
 		type: 'string',
 		default: '',
-		required: true,
+		required: false,
 		displayOptions: {
 			show: showOnlyForGraphStatsGenerate,
 		},
@@ -165,7 +165,7 @@ export const generateGraphSummaryDescription: INodeProperties[] = [
 		name: 'name',
 		type: 'string',
 		default: '',
-		required: true,
+		required: false,
 		displayOptions: {
 			show: showOnlyForGraphSummaryGenerate,
 		},
