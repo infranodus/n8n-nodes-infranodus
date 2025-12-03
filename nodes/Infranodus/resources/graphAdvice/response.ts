@@ -37,4 +37,28 @@ export const getGraphResponseDescription: INodeProperties[] = [
 			},
 		},
 	},
+	{
+		displayName: 'Include Statements in Response',
+		name: 'includeStatements',
+		type: 'options',
+		options: [
+			{
+				name: 'Yes',
+				value: 'true',
+			},
+			{
+				name: 'No',
+				value: 'false',
+			},
+		],
+		default: 'false',
+		description: 'Include statements used to generate the response with similarity scores',
+		displayOptions: { show: showOnlyForGraphResponse },
+		routing: {
+			send: {
+				type: 'query',
+				property: 'includeStatements',
+			},
+		},
+	},
 ];

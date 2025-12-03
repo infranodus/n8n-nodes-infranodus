@@ -52,7 +52,7 @@ export const retrieveStatementsFromGraphDescription: INodeProperties[] = [
 			},
 		],
 		default: 'false',
-		description: 'Include extended statements with similarity scores in response',
+		description: 'Include extended statement information with similarity scores in response',
 		displayOptions: { show: showOnlyForRetrieveStatementsFromGraph },
 		routing: {
 			send: {
