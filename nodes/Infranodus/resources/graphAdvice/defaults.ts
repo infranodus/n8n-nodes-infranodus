@@ -223,4 +223,18 @@ export const getGraphAdviceDefaultsDescription: INodeProperties[] = [
 			},
 		},
 	},
+	{
+		displayName: 'Compact Graph',
+		name: 'compactGraph',
+		type: 'hidden',
+		default: 'true',
+		description: 'Include condensed graph in response',
+		displayOptions: { show: showOnlyForGraphAdvice },
+		routing: {
+			send: {
+				type: 'query',
+				property: 'compactGraph',
+			},
+		},
+	},
 ];

@@ -4,6 +4,7 @@ import { graphNameDescription } from './name';
 import { generateQuestionDescription } from './question';
 import { getGraphResponseDescription } from './response';
 import { summarizeGraphDescription } from './summarize';
+import { retrieveStatementsFromGraphDescription } from './retrieve';
 
 const showOnlyForAiAdviceForGraph = {
 	resource: ['aiAdviceForGraph'],
@@ -74,5 +75,6 @@ export const aiAdviceForGraph: INodeProperties[] = [
 	...generateQuestionDescription,
 	...getGraphResponseDescription,
 	...summarizeGraphDescription,
+	...retrieveStatementsFromGraphDescription,
 	...getGraphAdviceDefaultsDescription,
 ];
