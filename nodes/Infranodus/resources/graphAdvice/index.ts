@@ -32,6 +32,18 @@ export const aiAdviceForGraph: INodeProperties[] = [
 				},
 			},
 			{
+				name: 'Retrieve Statements with GraphRAG',
+				value: 'retrieveStatementsFromGraph',
+				action: 'Retrieve statements from a graph',
+				description: 'Retrieve relevant statements from an existing graph using GraphRAG',
+				routing: {
+					request: {
+						method: 'POST',
+						url: '/graphAndAdvice',
+					},
+				},
+			},
+			{
 				name: 'Generate Research Questions',
 				value: 'questionGraph',
 				action: 'Generate research questions',
