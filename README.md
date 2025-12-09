@@ -218,6 +218,10 @@ To learn more about using InfraNodus with n8n, see our tutorials and videos on t
 
 ## Version history
 
+v 0.1.8 (2025-12-09)
+
+- better naming convention for create / update graph
+
 v 0.1.7 (2025-12-03)
 
 - bug fixes
