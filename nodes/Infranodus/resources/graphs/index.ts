@@ -19,10 +19,11 @@ export const knowledgeGraph: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Create a Graph From Text',
+				name: 'Create / Update a Graph From Text',
 				value: 'createGraph',
-				action: 'Create a new graph from text',
-				description: 'Generate a new knowledge graph from text and return it & stats',
+				action: 'Create / update a graph from text',
+				description:
+					'Create a new knowledge graph or update an existing one from text and return it & stats',
 				routing: {
 					request: {
 						method: 'POST',
